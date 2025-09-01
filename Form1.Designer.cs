@@ -36,10 +36,10 @@
             this.buttonEnterUser = new System.Windows.Forms.Button();
             this.buttonRegistrerUser = new System.Windows.Forms.Button();
             this.labelInicio = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelLoginPassword = new System.Windows.Forms.Label();
-            this.btnVerPassword = new System.Windows.Forms.Button();
             this.btnNoVerPassword = new System.Windows.Forms.Button();
+            this.btnVerPassword = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,7 +54,7 @@
             // textBoxLogin
             // 
             this.textBoxLogin.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.textBoxLogin.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.textBoxLogin.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textBoxLogin.Location = new System.Drawing.Point(325, 160);
             this.textBoxLogin.Name = "textBoxLogin";
             this.textBoxLogin.Size = new System.Drawing.Size(219, 20);
@@ -119,16 +119,6 @@
             this.labelInicio.TabIndex = 7;
             this.labelInicio.Text = "VALIDACIÓN DE USUARIO";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::PRACTICA_AEAE_2.Properties.Resources.pexels_lukas_hartmann_304281_1055613;
-            this.pictureBox1.Location = new System.Drawing.Point(-13, -31);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(801, 480);
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // labelLoginPassword
             // 
             this.labelLoginPassword.AutoSize = true;
@@ -140,6 +130,18 @@
             this.labelLoginPassword.Size = new System.Drawing.Size(120, 20);
             this.labelLoginPassword.TabIndex = 9;
             this.labelLoginPassword.Text = "CONTRASEÑA";
+            // 
+            // btnNoVerPassword
+            // 
+            this.btnNoVerPassword.BackColor = System.Drawing.Color.White;
+            this.btnNoVerPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNoVerPassword.Image = ((System.Drawing.Image)(resources.GetObject("btnNoVerPassword.Image")));
+            this.btnNoVerPassword.Location = new System.Drawing.Point(550, 211);
+            this.btnNoVerPassword.Name = "btnNoVerPassword";
+            this.btnNoVerPassword.Size = new System.Drawing.Size(29, 23);
+            this.btnNoVerPassword.TabIndex = 11;
+            this.btnNoVerPassword.UseVisualStyleBackColor = false;
+            this.btnNoVerPassword.Click += new System.EventHandler(this.btnNoVerPassword_Click);
             // 
             // btnVerPassword
             // 
@@ -153,17 +155,15 @@
             this.btnVerPassword.UseVisualStyleBackColor = false;
             this.btnVerPassword.Click += new System.EventHandler(this.btnVerPassword_Click);
             // 
-            // btnNoVerPassword
+            // pictureBox1
             // 
-            this.btnNoVerPassword.BackColor = System.Drawing.Color.White;
-            this.btnNoVerPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNoVerPassword.Image = ((System.Drawing.Image)(resources.GetObject("btnNoVerPassword.Image")));
-            this.btnNoVerPassword.Location = new System.Drawing.Point(550, 211);
-            this.btnNoVerPassword.Name = "btnNoVerPassword";
-            this.btnNoVerPassword.Size = new System.Drawing.Size(29, 23);
-            this.btnNoVerPassword.TabIndex = 11;
-            this.btnNoVerPassword.UseVisualStyleBackColor = false;
-            this.btnNoVerPassword.Click += new System.EventHandler(this.btnNoVerPassword_Click);
+            this.pictureBox1.BackgroundImage = global::PRACTICA_AEAE_2.Properties.Resources.pexels_lukas_hartmann_304281_1055613;
+            this.pictureBox1.Location = new System.Drawing.Point(-13, -31);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(801, 480);
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // FrmLogin
             // 

@@ -63,7 +63,7 @@ namespace PRACTICA_AEAE_2
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            int lastRowIndex = dataGridViewClientes.Rows.Count - 2; // Fila con datos (la penúltima)
+            int lastRowIndex = dataGridViewClientes.Rows.Count - 2;
             if (lastRowIndex < 0)
             {
                 MessageBox.Show("No hay datos para agregar");
@@ -72,14 +72,12 @@ namespace PRACTICA_AEAE_2
 
             DataGridViewRow lastRow = dataGridViewClientes.Rows[lastRowIndex];
 
-            // Extraer valores
             string nombre = lastRow.Cells[0].Value?.ToString().Trim();
             string documento = lastRow.Cells[1].Value?.ToString().Trim();
             string direccion = lastRow.Cells[2].Value?.ToString().Trim();
             string telefono = lastRow.Cells[3].Value?.ToString().Trim();
             string email = lastRow.Cells[4].Value?.ToString().Trim();
 
-            // Validar campos vacíos
             if (string.IsNullOrWhiteSpace(nombre) ||
                 string.IsNullOrWhiteSpace(documento) ||
                 string.IsNullOrWhiteSpace(direccion) ||
@@ -90,42 +88,36 @@ namespace PRACTICA_AEAE_2
                 return;
             }
 
-            // Validación: nombre solo letras y espacios
             if (!System.Text.RegularExpressions.Regex.IsMatch(nombre, @"^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$"))
             {
                 MessageBox.Show("El nombre solo debe contener letras y espacios");
                 return;
             }
 
-            // Validación: documento letras y números, sin espacios ni caracteres especiales
             if (!System.Text.RegularExpressions.Regex.IsMatch(documento, @"^[a-zA-Z0-9]+$"))
             {
                 MessageBox.Show("El documento solo debe contener letras y números, sin espacios ni símbolos");
                 return;
             }
 
-            // Validación: dirección debe contener al menos un '#'
             if (!direccion.Contains("#"))
             {
                 MessageBox.Show("La dirección debe contener un carácter '#' (ejemplo: Calle 5 #12-34)");
                 return;
             }
 
-            // Validación: teléfono debe contener solo números, máximo 11 dígitos
             if (!System.Text.RegularExpressions.Regex.IsMatch(telefono, @"^\d{1,11}$"))
             {
                 MessageBox.Show("El teléfono debe contener solo números (máximo 11 dígitos)");
                 return;
             }
 
-            // Validación: email básico
             if (!System.Text.RegularExpressions.Regex.IsMatch(email, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
             {
                 MessageBox.Show("El correo electrónico no es válido");
                 return;
             }
 
-            // Insertar en la base de datos
             string connectionString = "Server=DESKTOP-5EQEKKJ\\SQLEXPRESS;Database=formulario;Trusted_Connection=True;";
             string query = "INSERT INTO Clientes (NombreCliente, Documento, Direccion, Telefono, Email) " +
                            "VALUES (@NombreCliente, @Documento, @Direccion, @Telefono, @Email)";
@@ -164,7 +156,7 @@ namespace PRACTICA_AEAE_2
 
             DataGridViewRow selectedRow = dataGridViewClientes.SelectedRows[0];
 
-            string documento = selectedRow.Cells[1].Value?.ToString(); // Asumiendo que el documento está en la columna 1
+            string documento = selectedRow.Cells[1].Value?.ToString(); 
 
             if (string.IsNullOrEmpty(documento))
             {
@@ -221,14 +213,12 @@ namespace PRACTICA_AEAE_2
 
             DataGridViewRow selectedRow = dataGridViewClientes.SelectedRows[0];
 
-            // Extraer valores modificados
             string nombre = selectedRow.Cells[0].Value?.ToString().Trim();
             string documentoNuevo = selectedRow.Cells[1].Value?.ToString().Trim();
             string direccion = selectedRow.Cells[2].Value?.ToString().Trim();
             string telefono = selectedRow.Cells[3].Value?.ToString().Trim();
             string email = selectedRow.Cells[4].Value?.ToString().Trim();
 
-            // Validar campos vacíos
             if (string.IsNullOrWhiteSpace(nombre) ||
                 string.IsNullOrWhiteSpace(documentoNuevo) ||
                 string.IsNullOrWhiteSpace(direccion) ||
@@ -239,42 +229,36 @@ namespace PRACTICA_AEAE_2
                 return;
             }
 
-            // Validación: nombre solo letras y espacios
             if (!System.Text.RegularExpressions.Regex.IsMatch(nombre, @"^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$"))
             {
                 MessageBox.Show("El nombre solo debe contener letras y espacios.");
                 return;
             }
 
-            // Validación: documento letras y números, sin espacios ni símbolos
             if (!System.Text.RegularExpressions.Regex.IsMatch(documentoNuevo, @"^[a-zA-Z0-9]+$"))
             {
                 MessageBox.Show("El documento solo debe contener letras y números, sin espacios ni símbolos.");
                 return;
             }
 
-            // Validación: dirección debe contener al menos un '#'
             if (!direccion.Contains("#"))
             {
                 MessageBox.Show("La dirección debe contener un carácter '#' (ejemplo: Calle 5 #12-34).");
                 return;
             }
 
-            // Validación: teléfono solo números, máximo 11 dígitos
             if (!System.Text.RegularExpressions.Regex.IsMatch(telefono, @"^\d{1,11}$"))
             {
                 MessageBox.Show("El teléfono debe contener solo números (máximo 11 dígitos).");
                 return;
             }
 
-            // Validación: email básico
             if (!System.Text.RegularExpressions.Regex.IsMatch(email, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
             {
                 MessageBox.Show("El correo electrónico no es válido.");
                 return;
             }
 
-            // Obtener el documento original para saber a quién actualizar
             string documentoOriginal = selectedRow.Cells[1].Value?.ToString();
 
             string connectionString = "Server=DESKTOP-5EQEKKJ\\SQLEXPRESS;Database=formulario;Trusted_Connection=True;";

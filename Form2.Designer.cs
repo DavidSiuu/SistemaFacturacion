@@ -29,18 +29,19 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.iNICIOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cLIENTESToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pRODUCTOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fACTURASToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.iNFORMESToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eMPLEADOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sEGURIDADToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aYUDAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buttomLeftSession = new System.Windows.Forms.Button();
             this.labelTitleSystemOfFacture = new System.Windows.Forms.Label();
-            this.cLIENTESToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelContenido = new System.Windows.Forms.Panel();
-            this.iNICIOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buttonExitApplication = new System.Windows.Forms.Button();
+            this.aYUDAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aCERCADEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,6 +62,20 @@
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // iNICIOToolStripMenuItem
+            // 
+            this.iNICIOToolStripMenuItem.Name = "iNICIOToolStripMenuItem";
+            this.iNICIOToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
+            this.iNICIOToolStripMenuItem.Text = "INICIO";
+            this.iNICIOToolStripMenuItem.Click += new System.EventHandler(this.iNICIOToolStripMenuItem_Click);
+            // 
+            // cLIENTESToolStripMenuItem
+            // 
+            this.cLIENTESToolStripMenuItem.Name = "cLIENTESToolStripMenuItem";
+            this.cLIENTESToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
+            this.cLIENTESToolStripMenuItem.Text = "CLIENTES";
+            this.cLIENTESToolStripMenuItem.Click += new System.EventHandler(this.cLIENTESToolStripMenuItem_Click);
             // 
             // pRODUCTOSToolStripMenuItem
             // 
@@ -97,13 +112,6 @@
             this.sEGURIDADToolStripMenuItem.Text = "SEGURIDAD";
             this.sEGURIDADToolStripMenuItem.Click += new System.EventHandler(this.sEGURIDADToolStripMenuItem_Click);
             // 
-            // aYUDAToolStripMenuItem
-            // 
-            this.aYUDAToolStripMenuItem.Name = "aYUDAToolStripMenuItem";
-            this.aYUDAToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
-            this.aYUDAToolStripMenuItem.Text = "AYUDA";
-            this.aYUDAToolStripMenuItem.Click += new System.EventHandler(this.aYUDAToolStripMenuItem_Click);
-            // 
             // buttomLeftSession
             // 
             this.buttomLeftSession.BackColor = System.Drawing.Color.Red;
@@ -128,13 +136,6 @@
             this.labelTitleSystemOfFacture.TabIndex = 4;
             this.labelTitleSystemOfFacture.Text = "SISTEMA DE FACTURACIÓN";
             // 
-            // cLIENTESToolStripMenuItem
-            // 
-            this.cLIENTESToolStripMenuItem.Name = "cLIENTESToolStripMenuItem";
-            this.cLIENTESToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
-            this.cLIENTESToolStripMenuItem.Text = "CLIENTES";
-            this.cLIENTESToolStripMenuItem.Click += new System.EventHandler(this.cLIENTESToolStripMenuItem_Click);
-            // 
             // panelContenido
             // 
             this.panelContenido.Location = new System.Drawing.Point(12, 79);
@@ -142,13 +143,6 @@
             this.panelContenido.Size = new System.Drawing.Size(776, 359);
             this.panelContenido.TabIndex = 1;
             this.panelContenido.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContenido_Paint);
-            // 
-            // iNICIOToolStripMenuItem
-            // 
-            this.iNICIOToolStripMenuItem.Name = "iNICIOToolStripMenuItem";
-            this.iNICIOToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
-            this.iNICIOToolStripMenuItem.Text = "INICIO";
-            this.iNICIOToolStripMenuItem.Click += new System.EventHandler(this.iNICIOToolStripMenuItem_Click);
             // 
             // buttonExitApplication
             // 
@@ -160,6 +154,23 @@
             this.buttonExitApplication.TabIndex = 5;
             this.buttonExitApplication.Text = "SALIR";
             this.buttonExitApplication.UseVisualStyleBackColor = false;
+            this.buttonExitApplication.Click += new System.EventHandler(this.buttonExitApplication_Click_1);
+            // 
+            // aYUDAToolStripMenuItem
+            // 
+            this.aYUDAToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aCERCADEToolStripMenuItem});
+            this.aYUDAToolStripMenuItem.Name = "aYUDAToolStripMenuItem";
+            this.aYUDAToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
+            this.aYUDAToolStripMenuItem.Text = "AYUDA";
+            this.aYUDAToolStripMenuItem.Click += new System.EventHandler(this.aYUDAToolStripMenuItem_Click);
+            // 
+            // aCERCADEToolStripMenuItem
+            // 
+            this.aCERCADEToolStripMenuItem.Name = "aCERCADEToolStripMenuItem";
+            this.aCERCADEToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aCERCADEToolStripMenuItem.Text = "ACERCA DE";
+            this.aCERCADEToolStripMenuItem.Click += new System.EventHandler(this.aCERCADEToolStripMenuItem_Click);
             // 
             // Inicio
             // 
@@ -189,12 +200,13 @@
         private System.Windows.Forms.ToolStripMenuItem iNFORMESToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem eMPLEADOToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sEGURIDADToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem aYUDAToolStripMenuItem;
         private System.Windows.Forms.Button buttomLeftSession;
         private System.Windows.Forms.Label labelTitleSystemOfFacture;
         private System.Windows.Forms.ToolStripMenuItem cLIENTESToolStripMenuItem;
         private System.Windows.Forms.Panel panelContenido;
         private System.Windows.Forms.ToolStripMenuItem iNICIOToolStripMenuItem;
         private System.Windows.Forms.Button buttonExitApplication;
+        private System.Windows.Forms.ToolStripMenuItem aYUDAToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aCERCADEToolStripMenuItem;
     }
 }

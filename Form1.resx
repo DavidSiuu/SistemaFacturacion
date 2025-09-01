@@ -118,16 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnVerPassword.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAARZJREFUSEvt
-        VCEOAkEM5AlIzLUjkUgkEslTcEgkkufwBCTyJBKJREJ62V5mmx4BQUIIk6yZzm7bne6ORn98PURko6pX
-        Vb2HdbFY1L8MVT0khw6tY9w/CAAIm1sAswHdibXGRV0FAEvacCZ+rKo3it0ATDxuWkqy7A9kcOV8twDm
-        oSOueOE6Edk+7YQO32c8bwIwdZ61IrLLeAvsS+DKvFWYJTWU6bo3TbNi3ifOkjHpVY5ZDKBr2ypmvsS6
-        LuKoFr/qLvwgMy+IO9Oragr8OtgHQ9pBCbgHVYC6Yw/6gWAtXXXtgYGNs4kgvvMhW/w+AKyzYiqEd9AS
-        PwnfxfvvwMGdeKInJreho7zyDB/7iyI+9pv+8Tt4AFzLzuGbssIdAAAAAElFTkSuQmCC
-</value>
-  </data>
   <data name="btnNoVerPassword.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAATxJREFUSEvt
@@ -137,6 +127,16 @@
         DbbS5r4SHMPGeZM22n5UqbGoQno+uuTu0L0Jz4RV6j/UqHlTq5VYCGg8M1FoxZ7rDs61YlGFz6l5OkWL
         ezOBMywiJ4mzr9PhZSa8zVU8vgcNWkldR94RlxOOcLrzCP4ZWFu+Xd9C7W30mp617z8yWUPWrk3x1ybd
         c7Mpwlf0t/EJBebrq5qU7AEAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btnVerPassword.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAARZJREFUSEvt
+        VCEOAkEM5AlIzLUjkUgkEslTcEgkkufwBCTyJBKJREJ62V5mmx4BQUIIk6yZzm7bne6ORn98PURko6pX
+        Vb2HdbFY1L8MVT0khw6tY9w/CAAIm1sAswHdibXGRV0FAEvacCZ+rKo3it0ATDxuWkqy7A9kcOV8twDm
+        oSOueOE6Edk+7YQO32c8bwIwdZ61IrLLeAvsS+DKvFWYJTWU6bo3TbNi3ifOkjHpVY5ZDKBr2ypmvsS6
+        LuKoFr/qLvwgMy+IO9Oragr8OtgHQ9pBCbgHVYC6Yw/6gWAtXXXtgYGNs4kgvvMhW/w+AKyzYiqEd9AS
+        PwnfxfvvwMGdeKInJreho7zyDB/7iyI+9pv+8Tt4AFzLzuGbssIdAAAAAElFTkSuQmCC
 </value>
   </data>
 </root>
