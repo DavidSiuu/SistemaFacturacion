@@ -177,7 +177,20 @@ namespace PRACTICA_AEAE_2
                     command.Parameters.AddWithValue("@email", email);
                     command.Parameters.AddWithValue("@rol", rol);
                     command.Parameters.AddWithValue("@fechaIngreso", fechaIngreso);
-                    command.Parameters.AddWithValue("@fechaRetiro", string.IsNullOrWhiteSpace(fechaRetiro) ? (object)DBNull.Value : fechaRetiro);
+                    if (string.IsNullOrWhiteSpace(fechaRetiro))
+                    {
+                        command.Parameters.AddWithValue("@fechaRetiro", DBNull.Value);
+                    }
+                    else if (DateTime.TryParse(fechaRetiro, out DateTime fechaRetiroParsed))
+                    {
+                        command.Parameters.AddWithValue("@fechaRetiro", fechaRetiroParsed);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Fecha de retiro inválida.");
+                        return;
+                    }
+
 
                     connection.Open();
                     command.ExecuteNonQuery();
@@ -307,11 +320,12 @@ namespace PRACTICA_AEAE_2
             }
 
 
+            DateTime fechaIngresoParsed = DateTime.Now.Date;
+
             if (!string.IsNullOrWhiteSpace(fechaRetiro))
             {
-                if (DateTime.TryParseExact(fechaRetiro, "yyyy-MM-dd", null, System.Globalization.DateTimeStyles.None, out DateTime fechaRetiroParsed))
+                if (DateTime.TryParse(fechaRetiro, out DateTime fechaRetiroParsed))
                 {
-                    DateTime fechaIngresoParsed = DateTime.Now.Date;
                     if (fechaRetiroParsed < fechaIngresoParsed)
                     {
                         MessageBox.Show("La fecha de retiro no puede ser menor que la fecha de ingreso");
@@ -320,10 +334,11 @@ namespace PRACTICA_AEAE_2
                 }
                 else
                 {
-                    MessageBox.Show("Formato de fecha no válido. Use el formato yyyy-MM-dd (Ejemplo: 2025-08-31)");
+                    MessageBox.Show("Formato de fecha no válido. Asegúrese de que sea una fecha válida (Ejemplo: 2025-08-31)");
                     return;
                 }
             }
+
 
 
 
@@ -351,7 +366,20 @@ namespace PRACTICA_AEAE_2
                     command.Parameters.AddWithValue("@email", email);
                     command.Parameters.AddWithValue("@rol", rol);
                     command.Parameters.AddWithValue("@fechaIngreso", fechaIngreso);
-                    command.Parameters.AddWithValue("@fechaRetiro", string.IsNullOrWhiteSpace(fechaRetiro) ? (object)DBNull.Value : fechaRetiro);
+                    if (string.IsNullOrWhiteSpace(fechaRetiro))
+                    {
+                        command.Parameters.AddWithValue("@fechaRetiro", DBNull.Value);
+                    }
+                    else if (DateTime.TryParse(fechaRetiro, out DateTime fechaRetiroParsed))
+                    {
+                        command.Parameters.AddWithValue("@fechaRetiro", fechaRetiroParsed);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Fecha de retiro inválida");
+                        return;
+                    }
+
 
                     connection.Open();
                     int rowsAffected = command.ExecuteNonQuery();
